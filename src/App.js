@@ -1,4 +1,4 @@
-import logo from './logo.svg';
+import logo from './logo.png';
 import './App.css'
 
 function App() {
@@ -7,15 +7,40 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          EconoSim Project Homepage
         </p>
         <a
           className="App-link"
-          href="https://reactjs.org"
+          href="/demo"
+        >
+          EconoSim Demo
+        </a>
+        <p>
+          Other Sites
+        </p>
+        <a
+          className="App-link"
+          href="https://discord.gg/Urk6BtzX"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn React
+          Discord
+        </a>
+        <a
+          className="App-link"
+          href="https://github.com/EconoSim"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          GitHub
+        </a>
+        <a
+          className="App-link"
+          href="https://x.com/EconoSim"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          X
         </a>
       </header>
     </div>
