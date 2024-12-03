@@ -1,0 +1,44 @@
+name: Build and Copy to Server
+
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build-and-copy:
+    runs-on: ubuntu-22.04
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v4
+      - name: Set up Node.js with caching
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+          cache-dependency-path: package-lock.json
+      - name: Configure SSH
+        env:
+          RSA_PRIVATE_KEY: ${{ secrets.SSH_RSA_PRIVATE_KEY }}
+          KNOWN_HOSTS: ${{ secrets.SSH_KNOWN_HOSTS }}
+        run: |
+          mkdir -p ~/.ssh
+          echo "$RSA_PRIVATE_KEY" > ~/.ssh/id_rsa
+          chmod 600 ~/.ssh/id_rsa
+          echo "$KNOWN_HOSTS" > ~/.ssh/known_hosts
+          chmod 600 ~/.ssh/known_hosts
+      - name: Install npm dependencies
+        run: |
+          npm install
+      - name: Build the React app
+        run: | 
+          npm run build
+      - name: Remove old files from the server
+        run: |
+          ssh econosim@econosim.org rm -frv /www/econosim.org/econosim.org/static
+      - name: Copy new files to the server
+        run: |
+            scp \
+            -r \
+            build/* \
+            econosim@econosim.org:/www/econosim.org/econosim.org
