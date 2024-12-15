@@ -1,0 +1,25 @@
+.icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: var(--icon-size, 30px);
+    /* Default size */
+    height: var(--icon-size, 30px);
+    /* Default size */
+    text-decoration: none;
+    font-size: 16px;
+    cursor: pointer;
+    transition: color 0.2s;
+    color: var(--icon-color, black);
+}
+
+.icon-button:hover {
+    color: #007bff;
+    /* Example hover color */
+}
+
+.icon {
+    flex-shrink: 0;
+    width: 100%;
+    height: 100%;
+}
