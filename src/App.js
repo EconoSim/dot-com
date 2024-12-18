@@ -1,47 +1,23 @@
-import logo from './logo.png';
-import './App.css'
+import React from 'react';
+import { FaDiscord, FaGithub } from 'react-icons/fa';
+import { FaXTwitter } from "react-icons/fa6";
+import IconButton from './components/IconButton/IconButton';
+import './App.css';
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          EconoSim Project Homepage
-        </p>
-        <a
-          className="App-link"
-          href="/demo"
-        >
-          EconoSim Demo
-        </a>
-        <p>
-          Other Sites
-        </p>
-        <a
-          className="App-link"
-          href="https://discord.gg/Urk6BtzX"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Discord
-        </a>
-        <a
-          className="App-link"
-          href="https://github.com/EconoSim"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          GitHub
-        </a>
-        <a
-          className="App-link"
-          href="https://x.com/EconoSim"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          X
-        </a>
+        <div className="App-content">
+          <p className="App-title">econosim</p>
+          <p className="App-subtitle">Your gateway to economic simulations</p>
+          <a className="App-button" href="/demo">Run Demo</a>
+        </div>
+        <div className="App-iconContainer">
+          <IconButton icon={FaDiscord} href="https://discord.gg/Urk6BtzX" size={40} />
+          <IconButton icon={FaGithub} href="https://github.com/EconoSim" size={40} />
+          <IconButton icon={FaXTwitter} href="https://twitter.com/EconoSim" size={40} />
+        </div>
       </header>
     </div>
   );
