@@ -2,13 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import './IconButton.css';
 
-const IconButton = ({ icon: Icon, href, color = 'white', size = 30 }) => (
+const IconButton = ({ icon: Icon, href, size = 30 }) => (
   <a
     href={href}
     target="_blank"
     rel="noopener noreferrer"
     className="icon-button"
-    style={{ '--icon-color': color, '--icon-size': `${size}px` }}
+    style={{ '--icon-size': `${size}px` }}
   >
     <Icon className="icon" />
   </a>

@@ -1,0 +1,14 @@
+:root {
+    /* Light theme (default) */
+    --foreground: lime;
+    --altforeground: lime;
+    --altbackground: #1a1a1a;
+    --background: #0a0f04;
+    --hover: limegreen;
+}
+
+[data-theme='dark'] {
+    --foreground: #ffffff;
+    --background: #1a1a1a;
+    --hover: #333333;
+}
