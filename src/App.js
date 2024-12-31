@@ -20,7 +20,7 @@ function App() {
           </header>
           <div className="App-nav">
             <NavButton url="/devlogs">dev logs</NavButton>
-            <NavButton url="/demo">demo</NavButton>
+            <NavButton url="/rundemo">demo</NavButton>
           </div>
           <div className="App-iconContainer">
             <IconButton icon={FaDiscord} href="https://discord.gg/Urk6BtzX" size={40} />
@@ -33,7 +33,9 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/devlogs" element={<Devlogs />} />
-            <Route path="/demo" element={<div>dev</div>} />
+            <Route path="/rundemo" element={<div className="App-demo">
+                                            <a className="App-button" href="/demo" target="_blank" rel="noopener noreferrer">Run Demo</a>
+                                            </div>} />
           </Routes>
         </main>
       </div>

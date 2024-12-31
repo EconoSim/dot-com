@@ -8,7 +8,7 @@ const NavButton = ({ url, children }) => {
     const location = useLocation();
 
     const handleClick = () => {
-        navigate(url, { replace: true });
+        navigate(url);
     };
 
     const isActive = location.pathname === url;

@@ -26,6 +26,33 @@ body {
   padding-bottom: 1rem;
 }
 
+.App-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Full viewport height */
+}
+
+.App-button {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: var(--altbackground);
+  background-color: var(--foreground);
+  border: none;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  transition: padding 0.2s ease;
+}
+
+.App-button:hover {
+  background-color: var(--hover);
+  padding: 1rem 1.75rem;
+}
+
 .App-title {
   font-size: 1.1rem;
   align-content: left;
