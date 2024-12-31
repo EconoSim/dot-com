@@ -1,3 +1,5 @@
-.header {
-    color: var(--foreground)
+.devlogs {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
 }
