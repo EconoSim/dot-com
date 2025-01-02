@@ -4,11 +4,6 @@ import './DevLog.css';
 
 const DevLog = ({ project, repository, branch, user, message, date }) => (
     <div className="dev-log">
-        <div className="top-row">
-            <p className="project">{project}</p>
-            <p className="repository">{repository}</p>
-            <p className="branch">{branch}</p>
-        </div>
         <div className="middle-row">
             <p className="message">{message}</p>
         </div>

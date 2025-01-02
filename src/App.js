@@ -16,16 +16,16 @@ function App() {
       <div className="App-body">
         <aside className="App-sidebar">
           <header className="App-header">
-            <p className="App-title">econosim</p>
+            <a href="/" className="App-title">econosim</a>
           </header>
           <div className="App-nav">
             <NavButton url="/devlogs">dev logs</NavButton>
             <NavButton url="/rundemo">demo</NavButton>
           </div>
           <div className="App-iconContainer">
-            <IconButton icon={FaDiscord} href="https://discord.gg/Urk6BtzX" size={40} />
-            <IconButton icon={FaGithub} href="https://github.com/EconoSim" size={40} />
-            <IconButton icon={FaXTwitter} href="https://twitter.com/EconoSim" size={40} />
+            <IconButton icon={FaDiscord} href="https://discord.gg/hXWqhn3jAQ" />
+            <IconButton icon={FaGithub} href="https://github.com/EconoSim" />
+            <IconButton icon={FaXTwitter} href="https://twitter.com/EconoSim" />
           </div>
         </aside>
         <main className="App-main">
@@ -34,8 +34,8 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/devlogs" element={<Devlogs />} />
             <Route path="/rundemo" element={<div className="App-demo">
-                                            <a className="App-button" href="/demo" target="_blank" rel="noopener noreferrer">Run Demo</a>
-                                            </div>} />
+              <a className="App-button" href="/demo" target="_blank" rel="noopener noreferrer">Run Demo</a>
+            </div>} />
           </Routes>
         </main>
       </div>

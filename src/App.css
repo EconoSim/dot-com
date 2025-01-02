@@ -20,6 +20,12 @@ body {
   height: 100%;
 }
 
+.App-title {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 .App-header {
   color: var(--foreground);
   padding-top: 1rem;
@@ -85,10 +91,38 @@ body {
 
 .App-iconContainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
-  padding: 1rem;
+  padding: 0.5rem;
   margin-top: auto;
   margin-bottom: 1.5rem;
+}
+
+* {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--foreground) transparent;
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(26, 26, 26, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--foreground);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--hover);
 }

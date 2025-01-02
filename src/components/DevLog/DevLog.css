@@ -13,22 +13,18 @@
     padding: 0.5rem;
 }
 
-.top-row {
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    gap: 1rem;
-}
-
 .middle-row {
     display: flex;
     justify-content: flex-start;
+    text-align: left;
+    width: 100%;
 }
 
 .bottom-row {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
 }
 
 .project {
@@ -46,12 +42,16 @@
 
 .message {
     font-size: 14px;
+    text-align: left;
+    width: 100%;
 }
 
 .user {
-    font-size: 14px;
+    font-size: 10px;
+    text-align: left;
 }
 
 .date {
-    font-size: 14px;
+    font-size: 10px;
+    text-align: right;
 }
