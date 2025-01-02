@@ -10,11 +10,11 @@
     font-size: 16px;
     cursor: pointer;
     transition: color 0.2s;
-    color: var(--icon-color, black);
+    color: var(--foreground);
 }
 
 .icon-button:hover {
-    color: #007bff;
+    color: var(--hover);
     /* Example hover color */
 }
 

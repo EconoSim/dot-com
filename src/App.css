@@ -1,59 +1,43 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
 .App {
   text-align: center;
-  height: 100vh;
   display: flex;
   flex-direction: column;
-}
-
-.App-header {
-  position: relative;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-  padding: 2rem 0;
-  background-color: rgba(40, 44, 52, 0.85);
-  /* Adjust the opacity of the background */
-}
-
-.App-header::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
   height: 100%;
-  background-image: url('/src/Resources/simbackground.png');
-  /* Update the path to your image */
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  opacity: 0.4;
-  /* Adjust the opacity of the image */
-  z-index: -1;
-  /* Ensure the image is behind the content */
+  width: 100%;
 }
 
-.App-content {
+.App-body {
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  /* Ensure content is above the background */
+  flex: 1;
+  overflow: hidden;
+  height: 100%;
 }
 
 .App-title {
-  font-size: 4rem;
-  margin: 0;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
 }
 
-.App-subtitle {
-  font-size: 1.5rem;
-  margin: 0.5rem 0 2rem 0;
+.App-header {
+  color: var(--foreground);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+
+.App-demo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  /* Full viewport height */
 }
 
 .App-button {
@@ -61,27 +45,84 @@
   padding: 0.75rem 1.5rem;
   margin-top: 1rem;
   font-size: 1.2rem;
-  color: white;
-  background-color: #007bff;
+  color: var(--altbackground);
+  background-color: var(--foreground);
   border: none;
   border-radius: 4px;
   text-decoration: none;
   transition: background-color 0.3s ease;
+  transition: padding 0.2s ease;
 }
 
 .App-button:hover {
-  background-color: #0056b3;
+  background-color: var(--hover);
+  padding: 1rem 1.75rem;
+}
+
+.App-title {
+  font-size: 1.1rem;
+  align-content: left;
+  margin: 0;
+}
+
+.App-sidebar {
+  width: 120px;
+  height: 100%;
+  background-color: var(--altbackground);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.App-nav {
+  margin-top: 1rem;
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: column;
+  align-items: top;
+}
+
+.App-main {
+  flex: 1;
+  padding: 1rem;
+  background-color: var(--background);
+  overflow-y: auto;
 }
 
 .App-iconContainer {
   display: flex;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
   gap: 1rem;
-  padding: 1rem;
-  position: absolute;
-  bottom: 2rem;
+  padding: 0.5rem;
+  margin-top: auto;
+  margin-bottom: 1.5rem;
 }
 
-.App-link {
-  color: #61dafb;
+* {
+  /* Firefox */
+  scrollbar-width: thin;
+  scrollbar-color: var(--foreground) transparent;
+}
+
+/* Webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  background-color: transparent;
+}
+
+::-webkit-scrollbar-track {
+  background-color: rgba(26, 26, 26, 0.3);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--foreground);
+  border-radius: 4px;
+  opacity: 0.8;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: var(--hover);
 }
