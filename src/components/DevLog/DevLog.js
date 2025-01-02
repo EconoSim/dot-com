@@ -8,8 +8,7 @@ const DevLog = ({ project, repository, branch, user, message, date }) => (
             <p className="message">{message}</p>
         </div>
         <div className="bottom-row">
-            <p className="user">{user}</p>
-            <p className="date">{date}</p>
+            <p className="user">{user} - {date}</p>
         </div>
     </div>
 );
