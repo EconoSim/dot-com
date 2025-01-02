@@ -31,7 +31,7 @@ const DevLogContainer = ({ project, repository }) => {
     }, []);
 
     if (loading) return <div className="loading-container">Loading...</div>; if (error) return <div>Error: {error}</div>;
-
+    if (error) return <div className="loading-container">{error}</div>; if (error) return <div>Error: {error}</div>;
 
     const handleClick = () => {
         setIsExpanded(!isExpanded);
