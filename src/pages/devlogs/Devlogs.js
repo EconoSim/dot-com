@@ -7,7 +7,7 @@ function Devlogs() {
     return (
         <div className="devlogs">
             <DevLogContainer
-                project="Econosim"
+                project="EconoSim"
                 repository="econosim.org"
             />
         </div>
