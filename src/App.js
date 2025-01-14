@@ -34,7 +34,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/devlogs" element={<Devlogs />} />
             <Route path="/rundemo" element={<div className="App-demo">
-              <a className="App-button" href="/demo" target="_blank" rel="noopener noreferrer">Run Demo</a>
+              <a className="App-button" href="http://demo.econosim.org/" target="_blank" rel="noopener noreferrer">Run Demo</a>
             </div>} />
           </Routes>
         </main>
