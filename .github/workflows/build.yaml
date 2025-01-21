@@ -36,6 +36,6 @@ jobs:
         run: |
           aws s3 sync \
             build \
-            s3://econosim-website \
+            s3://econosim-website/react \
             --delete \
             --no-progress
