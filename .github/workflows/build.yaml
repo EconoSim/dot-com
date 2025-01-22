@@ -37,5 +37,6 @@ jobs:
           aws s3 sync \
             build \
             s3://econosim-website/react \
+            --cache-control "max-age=60, s-maxage=60" \
             --delete \
             --no-progress
