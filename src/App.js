@@ -17,7 +17,7 @@ function App() {
       <div className="App-body">
         <aside className="App-sidebar">
           <header className="App-header">
-            <a href="/" className="App-title">econosim</a>
+            <a onClick={() => navigate('/')} className="App-title">econosim</a>
           </header>
           <div className="App-nav">
             <NavButton url="/devlogs">dev logs</NavButton>
