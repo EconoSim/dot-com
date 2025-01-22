@@ -1,0 +1,36 @@
+.demo {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo>.container {
+    position: relative;
+    height: 600px;
+    width: 960px;
+}
+
+.demo>.container>.unity-canvas {
+    height: 600px;
+    width: 960px;
+}
+
+.demo>.container>.loading {
+    background-color: rgb(32, 32, 32);
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.demo>.container>.loading>.loading-message {
+    font-size: xx-large;
+    color: var(--foreground);
+}

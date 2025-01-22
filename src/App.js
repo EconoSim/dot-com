@@ -7,6 +7,7 @@ import NavButton from './components/NavButton/NavButton';
 import './App.css';
 import Home from './pages/home/Home';
 import Devlogs from './pages/devlogs/Devlogs';
+import Demo from './pages/demo/Demo';
 
 function App() {
   const navigate = useNavigate();
@@ -20,7 +21,7 @@ function App() {
           </header>
           <div className="App-nav">
             <NavButton url="/devlogs">dev logs</NavButton>
-            <NavButton url="/rundemo">demo</NavButton>
+            <NavButton url="/demo">demo</NavButton>
           </div>
           <div className="App-iconContainer">
             <IconButton icon={FaDiscord} href="https://discord.gg/hXWqhn3jAQ" />
@@ -33,9 +34,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/devlogs" element={<Devlogs />} />
-            <Route path="/rundemo" element={<div className="App-demo">
-              <a className="App-button" href="http://demo.econosim.org/" target="_blank" rel="noopener noreferrer">Run Demo</a>
-            </div>} />
+            <Route path="/demo" element={<Demo />} />
           </Routes>
         </main>
       </div>
